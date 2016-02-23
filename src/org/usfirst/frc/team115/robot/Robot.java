@@ -97,7 +97,13 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        SmartDashboard.putDouble("Slider", oi.getLaunchPad().getRawAxis(1));
+        double value = oi.getLaunchPad().getRawAxis(0);
+        /*
+        if (value == null)
+          SmartDashboard.putString("Slider", "null");  
+        else
+        */
+          SmartDashboard.putNumber("Slider", value);
     }
     
     /**

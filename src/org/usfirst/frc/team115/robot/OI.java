@@ -16,9 +16,9 @@ public class OI {
   private Joystick launchPad;
   
   public OI() {
-    Joystick launchPad = new Joystick(0);
+    Joystick launchPad = new Joystick(3);
     
-    new JoystickButton(launchPad, 0).toggleWhenPressed(new ExampleCommand () );
+    new JoystickButton(launchPad, 1).whileHeld(new ExampleCommand () );
     
   }
   
